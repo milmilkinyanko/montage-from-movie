@@ -52,7 +52,7 @@ def cv2_putText(img, text, org, fontFace, fontScale, color, mode=0):
 
 def main(body,num,w,mode):
     bgcolor = (255,255,255,0)
-    fontPIL = "/home/daiki/.local/share/fonts/FOT-TsukuGoPro-M.otf"
+    fontPIL = "/usr/share/fonts/opentype/ipaexfont-gothic/ipaexg.ttf"
     size = 120
     pen_width = 10
     textcolor = (0,0,0,255)
