@@ -14,12 +14,14 @@ if [ $fname == $fname_body ]; then
     exit 1
 fi
 
+rm -rf img/*
+
 w=2 # 連番にする際の桁数
-startsec=6
-period=20
-fps=0.67 # 2/3fpsすなわち3秒で2枚の画像
+startsec=5
+period=17
+fps=0.8 # 1fps
 # トリミングする際に、全体の幅・高さから引くpixel数 (切り取る幅)
-minus_w=700
+minus_w=500
 minus_h=0
 # 番号の描画を始める座標
 # 左上が0,0
@@ -29,11 +31,12 @@ ffmpeg -ss $startsec -t $period -i $fname -r $fps -vf crop=in_w-$minus_w:in_h-$m
 
 
 img_num=$(ls img/ | grep $fname_body | grep -v _converted.png | wc -l)
-mode=1
+mode=0
 # 左上に番号を振りたい時: 0
 # 右上に番号を振りたい時: 1
 # 右下に番号を振りたい時: 2
 # 左下に番号を振りたい時: 3
+echo "./mkwatermark.py $fname_body $img_num $w $mode"
 ./mkwatermark.py $fname_body $img_num $w $mode
 
 num_columns=5
