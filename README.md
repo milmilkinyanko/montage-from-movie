@@ -1,14 +1,16 @@
 # montage-from-video
+![sample](https://user-images.githubusercontent.com/23270769/159157529-1a71072e-d0a3-456a-bddf-ed187e4d022e.jpg)
 
-![sample](/uploads/57fc427f0fc56b4ec9dd0f13df8a6bec/sample.jpg)
-
+## Feature
 - 動画から一定時間ごとにスナップショットをとり、番号をつけた上でタイル状に並べて一枚の画像にするスクリプト群
 - ロボットの動きを論文に載せる際などに使えます
-- 参考: https://qiita.com/mo256man/items/b6e17b5a66d1ea13b5e3
-- 必要パッケージ: ffmpeg, python3, numpy, imagemagick, opencv
+- Ubuntu 20.04を標準としています
+- 必要パッケージ: ffmpeg, python3, numpy, opencv, svgwrite, inkscape
     - 大体もとから入ってるはず
+    - `$python3 -m pip install svgwrite`
+    - `$sudo apt install inkscape`
 
 ## 使い方
-- `$ ./mktile.sh sample.mp4`
-    - sampleは李林くんの動画をつかわせてもらっています
+- usage: `$ ./mktile.sh sample.mp4`
+    - sampleは https://www.youtube.com/watch?v=FsRjXtt1Sd8 より
 - うまくいかないときはimgフォルダの中身を消してください
