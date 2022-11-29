@@ -1,4 +1,4 @@
-# montage-from-video
+# montage-from-movie
 
 ![sample_tile-1](https://user-images.githubusercontent.com/23270769/204457838-6a683a72-d251-4a67-bd85-61e8b7710ab3.jpg)
 
@@ -11,6 +11,6 @@
     - `$python3 -m pip install svgwrite`
     - `$sudo apt install inkscape`
 
-## 使い方
-- usage: `$ ./mktile.sh sample.mp4`
+## Usage
+- `$ ./mktile.sh sample.mp4`
     - sampleは https://www.youtube.com/watch?v=FsRjXtt1Sd8 より
