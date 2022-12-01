@@ -41,4 +41,4 @@ mode=0
 # 左下に番号を振りたい時: 3
 ./mkwatermark_svg.py $fname_body $img_num $w $mode $num_columns $num_rows $tile_offset
 
-inkscape -f ${fname_body}_tile.svg -A ${fname_body}_tile.pdf                                                                                                                            [dev/vector]
+inkscape ${fname_body}_tile.svg --export-pdf=${fname_body}_tile.pdf --export-text-to-path
